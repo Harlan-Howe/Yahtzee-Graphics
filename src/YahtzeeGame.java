@@ -89,6 +89,23 @@ public class YahtzeeGame
 
 
     /**
+     * The user has clicked the Roll button. This might mean that you should tell some or all of the dice to roll(), but
+     * it might also mean that you do nothing, if this player has already rolled three times.
+     */
+    public void handleRollDiceButton()
+    {
+        System.out.println("The user just pressed the Roll button. I should do something about that, maybe.");
+        // Note: you may wish to tell some or all of the dice to roll(). After you do, be sure to tell
+        // GUI.repaint() so that it knows to redraw the dice, or they won't show that they have changed!
+        // TODO - Required: write this method.
+
+
+
+        GUI.repaint(); // make sure to do this so that the GUI updates the appearance of the dice on screen to match the
+        //   ones in memory.
+    }
+
+    /**
      * the user has just clicked somewhere on the scorecard. This is your opportunity to react to that, perhaps by
      * calculating the score for this set of dice on this row and entering it; perhaps by doing nothing, if the field
      * is already filled, isn't a clickable field, or if the dice haven't been rolled yet.
@@ -110,23 +127,6 @@ public class YahtzeeGame
         //TODO - Optional: write something that might give the user a preview of what would happen if the user clicked
         //    in this row.
         return;
-    }
-
-    /**
-     * The user has clicked the Roll button. This might mean that you should tell some or all of the dice to roll(), but
-     * it might also mean that you do nothing, if this player has already rolled three times.
-     */
-    public void handleRollDiceButton()
-    {
-        System.out.println("The user just pressed the Roll button. I should do something about that, maybe.");
-        // Note: you may wish to tell some or all of the dice to roll(). After you do, be sure to tell
-        // GUI.repaint() so that it knows to redraw the dice, or they won't show that they have changed!
-        // TODO - Required: write this method.
-
-
-
-        GUI.repaint(); // make sure to do this so that the GUI updates the appearance of the dice on screen to match the
-                       //   ones in memory.
     }
 
 
