@@ -73,8 +73,8 @@ public class YahtzeeGame
         }
         System.out.println("\nFrequency Array:");
         int[] freqArray = getFrequencyArray();
-        for (int i=1; i<6; i++)
-            System.out.println(i+"\t"+freqArray[i]);
+        for (int i=1; i<7; i++)
+            System.out.println("Number of "+i+"s:\t"+freqArray[i]);
         System.out.println(" testing getScoreInCategoryForCounts  ----------------------------------");
         for (int row=1; row<16; row++)
         {
