@@ -37,6 +37,9 @@ public class YahtzeeGame
     // private final int STATE_AFTER_FIRST_ROLL = 1;
     // private final int STATE_AFTER_SECOND_ROLL = 2;
     // private final int STATE_AFTER_THIRD_ROLL = 3;
+
+    // private int numPliesPlayed; // start at zero.
+
     private final YahtzeePanel GUI;
     private final YahtzeeFrame window;
 
