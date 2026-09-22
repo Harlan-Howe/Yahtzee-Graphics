@@ -9,6 +9,10 @@ public class YahtzeePanel extends JPanel implements MouseListener, MouseMotionLi
     private final int ROW_HEIGHT = 20;
     private final int DIE_SIZE = 60;
     private final int DIE_SPACING = 64;
+
+    private final int PLAYER_1 = 0;
+    private final int PLAYER_2 = 1;
+
     private final Font cardTextFont;
     private final String[] ROW_NAMES = {"","Ones","Twos","Threes","Fours","Fives","Sixes","Top Subtotal", "Bonus", "3 of a Kind",
             "4 of a Kind", "Full House", "Small Straight", "Large Straight", "Chance", "Yahtzee", "Bottom Subtotal","Total"};
@@ -26,7 +30,7 @@ public class YahtzeePanel extends JPanel implements MouseListener, MouseMotionLi
         diceToDisplay = null;
         p1Scores = null;
         p2Scores = null;
-        whichPlayersTurn = 1;
+        whichPlayersTurn = PLAYER_1;
         addMouseListener(this);
         addMouseMotionListener(this);
         referee = null;
@@ -78,11 +82,8 @@ public class YahtzeePanel extends JPanel implements MouseListener, MouseMotionLi
      */
     public void drawEmptyCard(Graphics g)
     {
-        if (whichPlayersTurn > 0)
-        {
-            g.setColor(new Color(196,255,196));
-            g.fillRect(100+50*whichPlayersTurn, 0, 50, ROW_HEIGHT*ROW_NAMES.length);
-        }
+        g.setColor(new Color(196,255,196));
+        g.fillRect(150+50*whichPlayersTurn, 0, 50, ROW_HEIGHT*ROW_NAMES.length);
 
         g.setColor(Color.lightGray);
         g.fillRect(0,ROW_HEIGHT,250,6*ROW_HEIGHT);
