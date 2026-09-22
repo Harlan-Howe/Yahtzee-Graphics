@@ -12,9 +12,9 @@ public class YahtzeeRunner
         }
 
         // build the players' scorecard columns
-        int[] p1ScoreList = new int[17];
-        int[] p2ScoreList = new int[17];
-        for (int i=0; i<17; i++)
+        int[] p1ScoreList = new int[18];
+        int[] p2ScoreList = new int[18];
+        for (int i=0; i<18; i++)
         {
             p1ScoreList[i] = -1;
             p2ScoreList[i] = -1;
