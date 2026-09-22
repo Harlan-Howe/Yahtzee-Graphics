@@ -7,8 +7,6 @@ public class YahtzeeRunner
         for (int i=0; i<5; i++)
         {
             diceList[i] = new Die();
-            if (Math.random() > 0.5)
-                diceList[i].select();
         }
 
         // build the players' scorecard columns
