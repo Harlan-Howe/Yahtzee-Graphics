@@ -1,37 +1,42 @@
 public class YahtzeeGame
 {
     private Die[] dice;
-    /**
-     * These scores are as follows:
-     * 0  unused
-     * 1  ones
-     * 2  twos
-     * 3  threes
-     * 4  fours
-     * 5  fives
-     * 6  sixes
-     * 7  subtotal for rows 1-6
-     * 8  top bonus ... +35 if the sum of rows 1-6 is 63 or more.
-     * 9  3 of a kind
-     * 10 4 of a kind
-     * 11 Full House
-     * 12 Small Straight
-     * 13 Large Straight
-     * 14 Chance
-     * 15 Yahtzee
-     * 16 subtotal for rows 9-15
-     * 17 total = both subtotals + bonus.
-     *
-     * Note: these ALL start off as -1, which means (unused/do not display). Don't count the -1 in your calculations.
-     */
-    private int[] player1Scores;
-    private int[] player2Scores;
+
+    /* Note: these ALL start off as -1, which means (unused/do not display). Don't count the -1 in your calculations.
+    See constants below for the meaning of each category "slot."
+    */
+    private int[] player1Scores; // 18 values for player 1's column
+    private int[] player2Scores; // 18 values for player 2's column
+
+    private final int CATEGORY_TITLE            = 0;  // should not respond to user selection
+    private final int CATEGORY_ONES             = 1;
+    private final int CATEGORY_TWOS             = 2;
+    private final int CATEGORY_THREES           = 3;
+    private final int CATEGORY_FOURS            = 4;
+    private final int CATEGORY_FIVES            = 5;
+    private final int CATEGORY_SIXES            = 6;
+    private final int CATEGORY_UPPER_SUBTOTAL   = 7;  // should not respond to user selection
+    private final int CATEGORY_BONUS            = 8;  // should not respond to user selection
+    private final int CATEGORY_3_OF_A_KIND      = 9;
+    private final int CATEGORY_4_OF_A_KIND      = 10;
+    private final int CATEGORY_FULL_HOUSE       = 11;
+    private final int CATEGORY_SMALL_STRAIGHT   = 12;
+    private final int CATEGORY_LARGE_STRAIGHT   = 13;
+    private final int CATEGORY_CHANCE           = 14;
+    private final int CATEGORY_YAHTZEE          = 15;
+    private final int CATEGORY_LOWER_SUBTOTAL   = 16; // should not respond to user selection
+    private final int CATEGORY_TOTAL            = 17; // should not respond to user selection
 
     //Recommended variables:
-    // int whoseTurnIsIt; (1 or 2)
-    // int whichRollIsIt; (1, 2, 3 or 4)  // 1 means about to roll first time.... 4 means all 3 rolls completed.
+    // private int whoseTurnIsIt; // constants below might be acceptable values
+    // private final int PLAYER_1 = 1;
+    // private final int PLAYER_2 = 2;
 
-
+    // private int whichRollIsIt; // constants below might be acceptable values
+    // private final int STATE_BEFORE_FIRST_ROLL = 0;
+    // private final int STATE_AFTER_FIRST_ROLL = 1;
+    // private final int STATE_AFTER_SECOND_ROLL = 2;
+    // private final int STATE_AFTER_THIRD_ROLL = 3;
     private final YahtzeePanel GUI;
     private final YahtzeeFrame window;
 
