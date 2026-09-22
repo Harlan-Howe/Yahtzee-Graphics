@@ -17,7 +17,7 @@ public class Die
     public Die()
     {
         roll();
-        deselect();
+        select();
     }
 
     /**
