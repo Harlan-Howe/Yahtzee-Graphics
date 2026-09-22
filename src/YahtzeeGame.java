@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class YahtzeeGame
 {
     private Die[] dice;
@@ -176,5 +178,15 @@ public class YahtzeeGame
 
         GUI.repaint(); // -- end with this so that if you have changed the values, the screen will update to reflect the
                        // changes.
+    }
+
+    /**
+     * displays a floating popup message window with the "messageToDisplay" displayed in it and a title "Game over." Will halt
+     * the program until the user presses the button. (Message might say who won?)
+     * @param messageToDisplay - the string that should show up in the window.
+     */
+    public void showGameOverPopup(String messageToDisplay)
+    {
+        JOptionPane.showMessageDialog(GUI, messageToDisplay, "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
     }
 }
